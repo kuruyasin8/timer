@@ -8,7 +8,7 @@ function App() {
   const counter = new Countdown(20, setCount, () => alert("done!"));
 
   useEffect(() => {
-    document.title = "Timer";
+    document.title = process.env.REACT_APP_SITE_HEADER ?? "";
   }, []);
 
   return (
